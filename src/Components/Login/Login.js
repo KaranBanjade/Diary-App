@@ -1,5 +1,8 @@
+// Importing useState to take care of variables
 import { useState } from 'react';
+// Importing CSS for the file
 import './Login.css';
+// Importing Axios for hitting APIs
 import axios from 'axios';
 
 const Login = () => {
