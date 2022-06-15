@@ -5,6 +5,7 @@ html{
 #login{
     margin-top: 10%;
     max-height: 100vh;
+    margin-left: 10rem;
 }
 #login-center{
     display: flex;
@@ -50,3 +51,29 @@ html{
 #login-logo{
     padding-left: 1.5rem;
 }
+
+/* Register Container */
+#register-container{
+    display: flex;
+}
+/* Icon */
+.material-symbols-outlined{
+    margin-left: 1rem;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+/* Link tag with text */
+#signup-link{
+    text-align: left;
+    font-weight: 700;
+    padding-left:1.5rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    margin-left: -1.5rem;
+    color: aliceblue
+}
+#signup-link:active{
+    color: #f8cbe7;
+}
+
