@@ -1,0 +1,26 @@
+.diary-container {
+    max-width: 40%;
+    /* height: 30%; */
+    padding: 0.5rem;
+    margin: 0.25rem;
+    border: 1px solid black;
+    font-size: .6rem;
+}
+  
+.diary-title{
+    margin-top:-.5rem;
+    padding-top:0;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.diary-created_at{
+    font-size: 0.7rem;
+    text-align: right;
+}
+.diary-body{
+    font-size: 0.8rem;
+}
+.diary-tags{
+    font-size: 0.6rem;
+}

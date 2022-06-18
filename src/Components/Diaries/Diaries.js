@@ -7,12 +7,10 @@ import axios from 'axios';
 
 import Diary from '../Diary/Diary'
 
-import { Outlet, Link } from "react-router-dom";
 const DiaryMultiple = () => {
     const [Diaries, setDiaries] = useState([]);
 
     useEffect(() =>{
-        console.log("Effected")
         axios({
             method: 'GET',
             url: `http://localhost:5000/diary/my/all`,
@@ -31,12 +29,9 @@ const DiaryMultiple = () => {
         });
     },[])
     return (
-        <span id="register" >
-            <div id = "register-right">
-                <h1>Diary</h1>
+            <div id = "container">
                 <Diary data = {Diaries} />
             </div>  
-        </span>
     )
 }
 

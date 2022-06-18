@@ -5,11 +5,13 @@ import './Login.css';
 // Importing Axios for hitting APIs
 import axios from 'axios';
 
-import { Outlet, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [input,setInput] = useState('');
     const [password,setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const loginApiFunction = (e) => {
 
@@ -26,11 +28,11 @@ const Login = () => {
             data["username"] = input
         
         // Check If any of the fields are empty
-        if(input==''){
+        if(input===''){
             alert("Enter Username or Email");
             return;
         }
-        if(password==''){
+        if(password===''){
             alert("Enter Password");
             return;
         }
@@ -44,6 +46,7 @@ const Login = () => {
             alert("Logged In");
             // Setting Token in localStorage for further hits
             localStorage.setItem("token", data.data.token);
+            navigate('/home');
         })
         .catch((err) => {
             // To be turned to toastify
