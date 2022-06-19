@@ -9,7 +9,6 @@ import Diary from '../Diary/Diary'
 
 const DiaryMultiple = () => {
     const [Diaries, setDiaries] = useState([]);
-
     useEffect(() =>{
         axios({
             method: 'GET',
@@ -19,18 +18,27 @@ const DiaryMultiple = () => {
             }
         })
         .then((data)=>{
-            // alert("Fetched");
-            setDiaries(data.data);
-            console.log(data.data);
+            console.log(data.data)
+            console.log(Diaries, "Diaries")
+            if(data.data === Diaries){
+                setDiaries(data.data);
+                // alert("Fetched");
+                console.log("Fetched");
+            }
+            // console.log(data.data);
         })
         .catch((err) => {
             console.log(err);
             // alert(err.response.data);
         });
-    },[])
+    },[Diaries])
     return (
             <div id = "container">
-                <Diary data = {Diaries} />
+                {
+                    Diaries.map((diary) => {
+                        return (<Diary data = {diary} Diaries = {Diaries} setDiaries = {setDiaries}/>)
+                    })
+                }
             </div>  
     )
 }
