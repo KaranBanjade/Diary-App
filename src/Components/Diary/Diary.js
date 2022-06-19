@@ -17,7 +17,7 @@ const Diary = (props) => {
             }
         })
             .then((data) => {
-                const Diarydata = (props.Diaries.filter(data => data._id !== id));
+                const Diarydata = props.Diaries.filter(data => data._id !== id);
                 props.setDiaries(Diarydata);
                 // setDiaryData(remainData);
                 alert("Deleted");
@@ -31,7 +31,6 @@ const Diary = (props) => {
     }
     let dat = props.data;
     let date = new Date(dat.created_at);
-    dat.tags = dat.tags.join(', ');
     // console.log(dat);
     return (
             // return (
@@ -47,7 +46,7 @@ const Diary = (props) => {
                         {dat.body}
                     </div>
                     <div className="diary-tags">
-                        {dat.tags}
+                        {dat.tags.join(", ")}
                     </div>
                     <div>
                         <button onClick={(e) => deleteDiary(e, dat._id)}><span className="material-symbols-outlined">delete</span></button>
