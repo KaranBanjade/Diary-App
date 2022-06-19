@@ -31,7 +31,6 @@ const Diary = (props) => {
     }
     let dat = props.data;
     let date = new Date(dat.created_at);
-    // console.log(dat);
     return (
             // return (
                 <div className="diary-container">
@@ -49,8 +48,7 @@ const Diary = (props) => {
                         {dat.tags.join(", ")}
                     </div>
                     <div>
-                        <button onClick={(e) => deleteDiary(e, dat._id)}><span className="material-symbols-outlined">delete</span></button>
-                        <button onClick={(e) => deleteDiary(e, dat._id)}><span className="material-symbols-outlined">edit</span></button>
+                        <span className="material-symbols-outlined" onClick={(e) => deleteDiary(e, dat._id)}>delete</span>
                     </div>
                 </div>
             )

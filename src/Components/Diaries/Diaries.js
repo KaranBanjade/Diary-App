@@ -7,6 +7,7 @@ import axios from 'axios';
 
 import Diary from '../Diary/Diary'
 
+import { Link, useNavigate } from "react-router-dom";
 const DiaryMultiple = () => {
     const [Diaries, setDiaries] = useState([]);
     console.log(Diaries);

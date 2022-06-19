@@ -29,3 +29,6 @@ button{
  width: fit-content;
  padding: 0;
 }
+.material-symbols-outlined{
+    cursor: pointer;
+}
