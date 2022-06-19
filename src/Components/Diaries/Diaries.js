@@ -7,7 +7,6 @@ import axios from 'axios';
 
 import Diary from '../Diary/Diary'
 
-import { Link, useNavigate } from "react-router-dom";
 const DiaryMultiple = () => {
     const [Diaries, setDiaries] = useState([]);
     console.log(Diaries);
@@ -20,13 +19,10 @@ const DiaryMultiple = () => {
             }
         })
         .then((data)=>{
-            // console.log(data.data);
             setDiaries(data.data);
-            // console.log(data.data);
         })
         .catch((err) => {
             console.log(err);
-            // alert(err.response.data);
         });
     },[])
 
@@ -37,7 +33,6 @@ const DiaryMultiple = () => {
                         (<Diary data = {diary} Diaries = {Diaries} setDiaries = {setDiaries}/>)
                     )
                 }
-                {/* <button onClick = {setTest(test+1)}> {test} </button> */}
             </div>  
     )
 }

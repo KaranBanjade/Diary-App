@@ -19,10 +19,7 @@ const Diary = (props) => {
             .then((data) => {
                 const Diarydata = props.Diaries.filter(data => data._id !== id);
                 props.setDiaries(Diarydata);
-                // setDiaryData(remainData);
-                alert("Deleted");
-                // setDiaries(data.data);
-                // console.log(data.data);
+                // alert("Deleted");
             })
             .catch((err) => {
                 console.log(err);
@@ -32,29 +29,25 @@ const Diary = (props) => {
     let dat = props.data;
     let date = new Date(dat.created_at);
     return (
-            // return (
-                <div className="diary-container">
-                    <div className="diary-title">
-                        {dat.title}
-                    </div>
-                    <div className="diary-created_at">
-                        {date.toLocaleDateString()}
-                        , {date.toLocaleTimeString()}
-                    </div>
-                    <div className="diary-body">
-                        {dat.body}
-                    </div>
-                    <div className="diary-tags">
-                        {dat.tags.join(", ")}
-                    </div>
-                    <div>
-                        <span className="material-symbols-outlined" onClick={(e) => deleteDiary(e, dat._id)}>delete</span>
-                    </div>
+            <div className="diary-container">
+                <div className="diary-title">
+                    {dat.title}
                 </div>
+                <div className="diary-created_at">
+                    {date.toLocaleDateString()}
+                    , {date.toLocaleTimeString()}
+                </div>
+                <div className="diary-body">
+                    {dat.body}
+                </div>
+                <div className="diary-tags">
+                    {dat.tags.join(", ")}
+                </div>
+                <div>
+                    <span className="material-symbols-outlined" onClick={(e) => deleteDiary(e, dat._id)}>delete</span>
+                </div>
+            </div>
             )
-        // }
-       // )
-    // )
 }
 
 export default Diary
