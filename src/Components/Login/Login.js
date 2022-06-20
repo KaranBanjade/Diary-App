@@ -59,7 +59,7 @@ const Login = () => {
             <center id = "login-center">
                 <div>
                     <img src = "Images/TopImg.png" alt="img" width="350rem" id='login-logo'/>
-                    <form id = "input-div" autocomplete = "off" >
+                    <form id = "input-div" autoComplete = "off" >
                         <input  type="text" 
                                 placeholder="Username/Mail" 
                                 className="login-input" 
@@ -75,7 +75,7 @@ const Login = () => {
                                 Login
                         </button>
                         <container id="register-container"> 
-                            <span class="material-symbols-outlined">how_to_reg</span>
+                            <span className="material-symbols-outlined">how_to_reg</span>
                             <Link to="/register" id = "signup-link">
                                 No Account? Register Now!
                             </Link>

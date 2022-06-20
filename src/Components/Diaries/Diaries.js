@@ -7,6 +7,8 @@ import axios from 'axios';
 
 import Diary from '../Diary/Diary'
 
+import Loader from '../Loader/Loader'
+
 const DiaryMultiple = () => {
     const [Diaries, setDiaries] = useState([]);
     console.log(Diaries);
@@ -29,9 +31,9 @@ const DiaryMultiple = () => {
     return (
             <div id = "container">
                 {
-                    Diaries.length > 0 && Diaries.map((diary) => 
-                        (<Diary data = {diary} Diaries = {Diaries} setDiaries = {setDiaries}/>)
-                    )
+                    Diaries.length <= 0?(<Loader />):(Diaries.map((diary) => 
+                        (<Diary data = {diary} Diaries = {Diaries} setDiaries = {setDiaries} key = {diary._id}/>)
+                    ))
                 }
             </div>  
     )

@@ -16,7 +16,7 @@ const Diary = (props) => {
                 "Authorization": localStorage.getItem("token")
             }
         })
-            .then((data) => {
+            .then(() => {
                 const Diarydata = props.Diaries.filter(data => data._id !== id);
                 props.setDiaries(Diarydata);
                 // alert("Deleted");
