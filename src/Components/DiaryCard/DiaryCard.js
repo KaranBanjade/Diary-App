@@ -48,7 +48,7 @@ const DiaryCard = (props) => {
                 <div>
                     <span className="material-symbols-outlined" onClick={(e) => deleteDiary(e, dat._id)}>delete</span>
                     <Link to = "/diary" state = {{data: dat}} >
-                    Jao
+                        <span className="material-symbols-outlined">edit</span>
                     </Link>
                 </div>
             </div>

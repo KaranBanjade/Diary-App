@@ -30,9 +30,9 @@ const DiaryPage = () => {
             navigate('/home');
         })
         .catch((err) => {
+            alert("Error: " + err.message)
             console.log(err);
         })
-        // alert("hi");
     }
     return (
         <>
