@@ -4,6 +4,8 @@ import './DiaryCard.css';
 import axios from 'axios';
 
 // import { useState, useEffect } from "react"
+import { Link} from "react-router-dom";
+
 const DiaryCard = (props) => {
     
 
@@ -45,6 +47,9 @@ const DiaryCard = (props) => {
                 </div>
                 <div>
                     <span className="material-symbols-outlined" onClick={(e) => deleteDiary(e, dat._id)}>delete</span>
+                    <Link to = "/diary" state = {{data: dat}} >
+                    Jao
+                    </Link>
                 </div>
             </div>
             )

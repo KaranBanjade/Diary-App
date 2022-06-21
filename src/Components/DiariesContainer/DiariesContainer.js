@@ -6,6 +6,7 @@ import './DiariesContainer.css';
 import axios from 'axios';
 
 import Diary from '../DiaryCard/DiaryCard'
+// import DiaryPage from '../DiaryPage/DiaryPage'
 
 import Loader from '../Loader/Loader'
 

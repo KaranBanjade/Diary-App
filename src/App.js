@@ -3,6 +3,7 @@ import './App.css';
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import DiariesContainer from './Components/DiariesContainer/DiariesContainer'
+import DiaryPage from './Components/DiaryPage/DiaryPage'
 function App() {
   return (
    <BrowserRouter>
@@ -11,7 +12,7 @@ function App() {
           <Route index element = {<Login />}/>
           <Route path ="register" element = {<Register />}/>
           <Route path ="home" element = {<DiariesContainer />}/>
-          {/* <Route path ="diary" element = {<Diary />}/> */}
+          <Route path ="diary" element = {<DiaryPage />}/>
         </Route>
       </Routes>
    </BrowserRouter>

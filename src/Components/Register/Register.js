@@ -5,13 +5,8 @@ import './Register.css';
 // Importing Axios for hitting APIs
 import axios from 'axios';
 
-import { Outlet, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 const Register = () => {
-    // const [email,setEmail] = useState('');
-    // const [username, setUsername] = useState('');
-    // const [name, setName] = useState('');
-    // const [password,setPassword] = useState('');
-    // const [rePassword,setRePassword] = useState('');
     const [formData, setFormData] = useState({});
     const handleChange = (e) => {
         setFormData((prevState)=>{
