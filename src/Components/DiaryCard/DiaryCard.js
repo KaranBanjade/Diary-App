@@ -1,10 +1,10 @@
 // Importing CSS for the file
-import './Diary.css';
+import './DiaryCard.css';
 // Axios for hitting api
 import axios from 'axios';
 
 // import { useState, useEffect } from "react"
-const Diary = (props) => {
+const DiaryCard = (props) => {
     
 
     const deleteDiary = (e, id) => {
@@ -50,5 +50,5 @@ const Diary = (props) => {
             )
 }
 
-export default Diary
+export default DiaryCard
 

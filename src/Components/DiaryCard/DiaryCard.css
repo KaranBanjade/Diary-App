@@ -24,11 +24,6 @@
 .diary-tags{
     font-size: 0.6rem;
 }
-button{
- background-color: blue;
- width: fit-content;
- padding: 0;
-}
 .material-symbols-outlined{
     cursor: pointer;
 }

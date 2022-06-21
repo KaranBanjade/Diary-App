@@ -1,17 +1,16 @@
 // Importing useState to take care of variables
 import { useState, useEffect } from 'react';
 // Importing CSS for the file
-import './Diaries.css';
+import './DiariesContainer.css';
 // Importing Axios for hitting APIs
 import axios from 'axios';
 
-import Diary from '../Diary/Diary'
+import Diary from '../DiaryCard/DiaryCard'
 
 import Loader from '../Loader/Loader'
 
-const DiaryMultiple = () => {
+const DiariesContainer = () => {
     const [Diaries, setDiaries] = useState([]);
-    console.log(Diaries);
     useEffect(() =>{
         axios({
             method: 'GET',
@@ -39,5 +38,5 @@ const DiaryMultiple = () => {
     )
 }
 
-export default DiaryMultiple
+export default DiariesContainer
 
