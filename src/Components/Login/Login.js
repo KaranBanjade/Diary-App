@@ -43,9 +43,9 @@ const Login = () => {
 			data,
 		})
         .then((data)=>{
-            alert("Logged In");
             // Setting Token in localStorage for further hits
             localStorage.setItem("token", data.data.token);
+            alert("Logged In");
             navigate('/home');
         })
         .catch((err) => {
