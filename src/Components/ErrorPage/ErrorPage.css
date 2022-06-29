@@ -1,0 +1,22 @@
+.error-page-buttons{
+    margin: auto;
+    margin-top: 1rem;
+    background-color: rgb(255, 150, 231);
+    text-decoration: none;
+    width: fit-content;
+}
+.error-page-buttons:hover{
+    cursor: pointer;
+}
+
+#error-page-container{
+    color: black;
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding:2rem;
+    width: fit-content;
+    margin: auto;
+    margin-top: 12%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
