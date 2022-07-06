@@ -76,4 +76,30 @@ html{
 #signup-link:active{
     color: #f8cbe7;
 }
-
+@media(max-width: 600px){
+    #login{
+        margin-left: 5%;
+        margin-right: 0;
+        margin-top: 40%;
+        width: 80%;
+    }
+    #login-center{
+        flex-direction: column;
+    }
+    #login-pencil{
+        visibility: hidden;
+    }
+    #login-logo{
+        padding-left: 0;
+    }
+    #input-div{
+        flex-direction: column;
+    }
+    #login-button{
+        width: 90%;
+    }
+    #signup-link{
+        margin-left: 0;
+    }
+}
+    
