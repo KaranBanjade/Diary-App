@@ -15,43 +15,44 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 const DiariesContainer = () => {
     const [Diaries, setDiaries] = useState([]);
     const [error, setError] = useState('');
-    useEffect(() =>{
+    useEffect(() => {
+        // all diaries of karan in sacchu account
         axios({
             method: 'GET',
             url: `http://localhost:5000/diary/my/all`,
             headers: {
-                "Authorization" : localStorage.getItem("token")
+                "Authorization": localStorage.getItem("token")
             }
         })
-        .then((data)=>{
-            let dataObject = data.data;
-            if(dataObject.code<400){
-                setDiaries(dataObject.data);
-                // Toast(Fetched)
-            }
-            else{
-                alert(dataObject.message);
-                setError(dataObject.message);
-            }
-        })
-        .catch((err) => {
-            console.log("err", err);
-            setDiaries(err.response);
-            console.log(Diaries)
-        });
-    },[])
-    
-    if(error){
-        return <ErrorPage error={error}/>
+            .then((data) => {
+                let dataObject = data.data;
+                if (dataObject.code < 400) {
+                    setDiaries(dataObject.data);
+                    // Toast(Fetched)
+                }
+                else {
+                    alert(dataObject.message);
+                    setError(dataObject.message);
+                }
+            })
+            .catch((err) => {
+                console.log("err", err);
+                setDiaries(err.response);
+                console.log(Diaries)
+            });
+    }, [])
+
+    if (error) {
+        return <ErrorPage error={error} />
     }
     return (
         <>
-            <div id = "container">
+            <div id="container">
                 {
-                    (Diaries.length <= 0?(<Loader />):(Diaries.map((diary) => (<Diary data = {diary} Diaries = {Diaries} setDiaries = {setDiaries} key = {diary._id}/>))))
+                    (Diaries.length <= 0 ? (<Loader />) : (Diaries.map((diary) => (<Diary data={diary} Diaries={Diaries} setDiaries={setDiaries} key={diary._id} />))))
                 }
-            </div>  
-                <LogOutButton />
+            </div>
+            <LogOutButton />
         </>
     )
 
