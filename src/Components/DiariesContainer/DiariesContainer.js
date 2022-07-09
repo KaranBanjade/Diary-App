@@ -15,6 +15,7 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 const DiariesContainer = () => {
     const [Diaries, setDiaries] = useState([]);
     const [error, setError] = useState('');
+    // const[code,setCode] = useState(0);
     useEffect(() => {
         // all diaries of karan in sacchu account
         axios({
@@ -45,11 +46,14 @@ const DiariesContainer = () => {
     if (error) {
         return <ErrorPage error={error} />
     }
+    if(Diaries.length == 0) {
+        return <h1>No diaries to show</h1>
+    }
     return (
         <>
             <div id="container">
                 {
-                    (Diaries.length <= 0 ? (<Loader />) : (Diaries.map((diary) => (<Diary data={diary} Diaries={Diaries} setDiaries={setDiaries} key={diary._id} />))))
+                    (Diaries.length < 0 ? (<Loader />) : (Diaries.map((diary) => (<Diary data={diary} Diaries={Diaries} setDiaries={setDiaries} key={diary._id} />))))
                 }
             </div>
             <LogOutButton />
